@@ -1874,6 +1874,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -1921,10 +1922,13 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     fetchData: function fetchData() {
+      var _this = this;
+
       this.error = this.users = null;
       this.loading = true;
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/users').then(function (response) {
-        console.log(response);
+        _this.loading = false;
+        _this.users = response.data;
       });
     }
   }
@@ -2427,6 +2431,10 @@ var render = function() {
         _vm._v(" "),
         _c("router-link", { attrs: { to: { name: "hello" } } }, [
           _vm._v("Hello World")
+        ]),
+        _vm._v(" "),
+        _c("router-link", { attrs: { to: { name: "users.index" } } }, [
+          _vm._v("Users")
         ])
       ],
       1
