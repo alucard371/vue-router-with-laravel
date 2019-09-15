@@ -15700,6 +15700,10 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     path: '/hello',
     name: 'hello',
     component: _views_Hello__WEBPACK_IMPORTED_MODULE_3__["default"]
+  }, {
+    path: '/users',
+    name: 'users.index',
+    component: UsersIndex
   }]
 });
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
